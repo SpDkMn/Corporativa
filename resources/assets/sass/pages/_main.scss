@@ -1,0 +1,20 @@
+// landing
+@import './home';
+@import './about';
+// @import './faq';
+@import './contact';
+@import './products';
+// @import './profile';
+// @import './community';
+// @import './blog';
+// @import './term';
+// @import './package';
+// @import './membership';
+
+.preload-app{
+  width: 50px;
+  height: 50px;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+}

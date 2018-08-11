@@ -1,0 +1,261 @@
+.section__membership{
+  width: 100%;
+  position: relative;
+  background-color: #f0f0f0;
+  .section__banner{
+    background: {
+      image: url(/static/img/banner_profile.jpg);
+    }
+  }
+  .b_membership{
+    position: relative;
+    width: 100%;
+    min-height: 1%;
+    padding: 30px 0 30px;
+    background-color: #f0f0f0;
+    .b__icon{
+      width: 100%;
+      position: relative;
+      padding-bottom: 15px;
+      img{
+        display: block;
+        margin: 0 auto;
+      }
+      .line{
+        margin-top: 5px;
+        background-color: #adadad;
+        width: 40px;
+        height: 3px;
+        margin: 10px auto 0;
+      }
+    }
+  }
+  .content__membership{
+    width: 1200px;
+    margin: 0 auto;
+    min-height: 350px;
+    background-color: #fff;
+    padding: 50px 70px 50px;
+    .profile--image{
+      width: 290px;
+      float: left;
+      text-align: center;
+      .image{
+        width: 280px;
+        height: auto;
+        margin: 0 auto;
+        img {
+          display: block;
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+    .profile--detail{
+      width: 370px;
+      margin-left: 60px;
+      float: left;
+      .b_subscribe{
+        @include fontLato(20px, 900);
+        text-align: center;
+        p{
+          line-height: 20px;
+          margin-bottom: 13px;
+        }
+        .btn--status{
+          width: 120px;
+          display: block;
+          margin: 0 auto;
+          background-color: $color-yellow;
+          height: 28px;
+          border: 0;
+          padding: 0;
+          line-height: 28px;
+          font-size: 13px;
+          @include borderRadius(2px);
+          &:hover {
+            cursor: pointer;
+            outline: 0;
+          }
+        }
+      }
+      .b_text{
+        text-align: center;
+        width: 100%;
+        position: relative;
+        margin-top: 50px;
+        @include fontLato(30px, 900);
+        p{
+          line-height: 30px;
+          margin-bottom: 1px;
+        }
+        span{
+          font-size: 15px;
+          display: block;
+          font-weight: 400;
+          font-style: italic;
+        }
+      }
+      .b_price{
+        position: relative;
+        width: 100%;
+        margin-top: 18px;
+        line-height: 40px;
+        text-align: center;
+        @include fontLato(48px, 700);
+        span{
+          font-size: 18px;
+        }
+      }
+    }
+    .profile--beer{
+      width: 335px;
+      float: left;
+      padding-left: 70px;
+      padding-top: 50px;
+      p{
+        line-height: 18px;
+        @include fontLato(18px, 700);
+      }
+      .btn--status{
+        display: inline-block;
+        background-color: #666;
+        color: #fff;
+        border-radius: 30px;
+        height: 28px;
+        line-height: 28px;
+        border: 0;
+        padding: 0 15px;
+        &:hover, &:focus{
+          outline: 0;
+        }
+      }
+      .btn--cancelsubs{
+        display: inline-block;
+        background-color: #666;
+        color: #fff;
+        border-radius: 30px;
+        height: 28px;
+        line-height: 28px;
+        border: 0;
+        padding: 0 15px;
+        &:hover, &:focus{
+          outline: 0;
+        }
+      }
+      .nav{
+        margin: 5px 0 18px;
+        width: 100%;
+        > li{
+          position: relative;
+          float: none;
+          width: 100%;
+          padding: 2px 2px 2px 20px;
+          @include fontLato(14px, 400);
+          img{
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 14px;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+  .content__reviews{
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 35px 15px 35px;
+    margin-top: 40px;
+    h5{
+      @include fontLato(30px, 600);
+      margin: 0 0 40px;
+      text-align: center;
+      color: #333;
+    }
+    .list_reviews{
+      width: 100%;
+      position: relative;
+    }
+    .review__profile {
+      .review__item{
+        width: 100%;
+        position: relative;
+        float: left;
+        padding: 0 10px;
+        display: block;
+        margin-bottom: 30px;
+        .brand,
+        .beer{
+          width: 250px;
+          height: 210px;
+          float: left;
+          img {
+            height: 210px;
+            width: auto;
+            margin: 0 auto;
+            display: block;
+          }
+        }
+        .detail{
+          float: left;
+          position: relative;
+          padding-top: 40px;
+          width: 610px;
+        }
+        .pad10{
+          width: 100%;
+          position: relative;
+          min-height: 240px;
+          padding: 15px;
+          background-color: #f8f8f8;
+          border: 1px solid #e7e7e7;
+        }
+        .title{
+          position: relative;
+          width: 100%;
+          display: block;
+          margin: 0 0 15px;
+          .name{
+            display: inline-block;
+            font-weight: 400;
+            font-size: 20px;
+            font-family: "Lato", sans-serif;
+          }
+          .date{
+            float: right;
+            position: relative;
+            top: 3px;
+          }
+          .score{
+            display: inline-block;
+            margin-left: 15px;
+            .nav{
+              > li{
+                float: left;
+                width: 13px;
+                height: 12px;
+                background: {
+                  image: url(/static/img/icon-star-opacity.png);
+                  position: center;
+                  repeat: no-repeat;
+                  size: cover;
+                };
+                &.active{
+                  background: {
+                    image: url(/static/img/icon-star.png);
+                  }
+                }
+                & + li{
+                  margin-left: 3px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

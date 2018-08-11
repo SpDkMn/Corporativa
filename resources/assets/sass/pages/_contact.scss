@@ -1,0 +1,126 @@
+.section__contact{
+  .content__contact{
+    $sizeCircle: 50px;
+    position: relative;
+    width: 100%;
+    min-height: 1%;
+    padding: 75px 0 0;
+    .block__detail{
+    }
+    .circle--hover{
+      position: absolute;
+      width: $sizeCircle;
+      height: $sizeCircle;
+      top: 0;
+      left: 0;
+      .circle-back{
+        position: absolute;
+        z-index: 5;
+        background-color: rgba($color-blue, .4);
+        width: 0;
+        height: 0;
+        top: 50%;
+        left: 50%;
+        @include borderRadius(50%);
+        margin-top: 0;
+        margin-left: 0;
+        transition: all .3s ease;
+      }
+      .circle-front{
+        background-color: $color-blue;
+        color: #fff;
+        width: $sizeCircle;
+        height: $sizeCircle;
+        @include borderRadius(50%);
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        padding-top: 12px;
+      }
+    }
+    .nav_location{
+      position: relative;
+      width: 100%;
+      > li {
+        position: relative;
+        width: 100%;
+        float: none;
+        padding: 0 0 0 70px;
+        .name{
+          color: $color-blue;
+          @include fontLato(18px, 400);
+          line-height: 18px;
+          margin: 0 0 5px;
+        }
+        span{
+          display: block;
+        }
+        &:hover{
+          .circle-back{
+            width: $sizeCircle + 10px;
+            height: $sizeCircle + 10px;
+            margin-top: -($sizeCircle + 10px)/2;
+            margin-left: -($sizeCircle + 10px)/2;
+          }
+        }
+        & + li{
+          margin-top: 35px;
+        }
+      }
+    }
+    .block__form{
+      width: 100%;
+      margin: 0 auto;
+      @media (min-width: 992px) {
+        width: 570px;
+      }
+      .row{
+        margin-left: -8px;
+        margin-right: -8px;
+      }
+      .col-xs-12, .col-sm-4{
+        padding: 0 8px;
+      }
+      .ui-textbox{
+        margin-bottom: 16px;
+        &.is-active{
+          .ui-textbox__input, .ui-textbox__textarea{
+            background-color: #fff;
+          }
+        }
+      }
+      .input-textarea{
+        .ui-textbox__textarea{
+          height: 120px !important;
+        }
+      }
+      .ui-textbox__input, .ui-textbox__textarea{
+        @include borderRadius(0px);
+        border: 1px solid #e5e5e5;
+        background-color: #f6f6f6;
+      }
+      .ui-button{
+        height: auto;
+        background-color: $color-yellow;
+        padding: 14px 50px;
+        @include fontLato(16px, 400);
+        color: #999;
+        @include borderRadius(0px);
+      }
+      .b_send{
+        margin-top: 15px;
+      }
+    }
+    .block__map{
+      width: 100%;
+      position: relative;
+      height: 400px;
+      margin-top: 75px;
+      .gmap{
+        width: 100%;
+        position: relative;
+        height: 400px;
+      }
+    }
+  }
+}

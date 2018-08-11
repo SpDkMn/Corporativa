@@ -1,0 +1,132 @@
+.section__products{
+  .content__products{
+    position: relative;
+    width: 100%;
+    min-height: 1%;
+    padding: 30px 0 30px;
+    background-color: #fff;
+  }
+  .content__inner{
+    width: 100%;
+    background-color: #fff;
+    padding: 0;
+    min-height: 30px;
+    @include mq('tablet') {
+      padding: 40px 10px 30px;
+    }
+  }
+  .product__list{
+    margin-left: -10px;
+    margin-right: -10px;
+    .product__item{
+      $wBlock: 380px;
+      $hBlock: 270px;
+      position: relative;
+      padding: 0 10px;
+      display: block;
+      @include clearfix();
+      & + .product__item{
+        margin-top: 50px;
+        &:after{
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          background-color: #e5e5e5;
+          left: 0;
+          top: -25px;
+          content: '';
+        }
+      }
+    }
+    .product__inner{
+      position: relative;
+      margin: 0 auto;
+      padding: 0;
+      width: 100%;
+      // height: $hBlock;
+      display: block;
+      border: 0;
+      background-color: #fff;
+      @include clearfix();
+    }
+    .product__image{
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 260px;
+      img{
+        display: block;
+        max-width: 350px;
+        margin: 0 auto;
+        max-height: 100%;
+      }
+      @include mq('tablet'){
+        height: 300px;
+        width: 50%;
+        float: left;
+      }
+    }
+    .product__text{
+      width: 100%;
+      position: relative;
+      padding: 15px;
+      height: 260px;
+      @include mq('tablet'){
+        height: 300px;
+        width: 50%;
+        float: left;
+      }
+    }
+    .product__item{
+      @include mq('tablet'){
+        &:nth-child(odd){
+          .product__image{
+            float: left;
+          }
+        }
+        &:nth-child(even){
+          .product__image{
+            float: right;
+          }
+        }
+      }
+    }
+    .title{
+      color: $color-blue;
+      margin: 0 0 15px;
+      text-transform: uppercase;
+      @include fontLato(28px, 700);
+    }
+    .table{
+      >tbody{
+        >tr{
+          >td{
+            height: 30px;
+            &.bg-color{
+              background-color: $color-blue;
+            }
+          }
+        }
+      }
+    }
+    .description {
+      line-height: 24px;
+      margin: 0 0 15px;
+    }
+    .alink{
+      display: inline-block;
+      *display: inline;
+      margin: 0;
+      padding: 6px 20px;
+      margin: 0;
+      @include borderRadius(20px);
+      background-color: #000;
+      color: $color-yellow;
+      @include fontLato(14px, 700);
+      &:hover{
+        text-decoration: none;
+        outline: 0;
+      }
+    }
+  }
+}

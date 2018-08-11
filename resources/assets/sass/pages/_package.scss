@@ -1,0 +1,354 @@
+.section__package{
+  .section__banner{
+    background: {
+      image: url(/static/img/banner_profile.jpg);
+    }
+  }
+  .section__content{
+    position: relative;
+    width: 100%;
+    min-height: 1%;
+    margin: 0 auto;
+    padding: 30px 0 75px;
+    background-color: #f0f0f0;
+    .b__icon{
+      width: 100%;
+      position: relative;
+      padding-bottom: 25px;
+      img{
+        display: block;
+        margin: 0 auto;
+      }
+      .line{
+        margin-top: 5px;
+        background-color: #adadad;
+        width: 40px;
+        height: 3px;
+        margin: 10px auto 0;
+      }
+    }
+    .section__inner{
+      width: 100%;
+      margin: 0 auto;
+      padding: 30px 15px;
+      background-color: #fff;
+    }
+    hr{
+      border-top: 1px solid #909090;
+      border-bottom: 1px solid #909090;
+    }
+    .content__filter{
+      width: 270px;
+      float: left;
+      padding: 0 10px;
+      margin-right: 30px;
+    }
+    .btn--buy{
+      @include fontLato(13px, 900);
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      color: #000;
+      text-align: center;
+      padding: 0 10px;
+      border-radius: 4px;
+      border: 0;
+      background-color: $color-yellow;
+    }
+    .pack_brewz{
+      text-align: center;
+      width: 100%;
+      position: relative;
+      margin-top: 15px;
+      .num{
+        width: 100%;
+        margin-bottom: 10px;
+        font-style: italic;
+        color: #000;
+        span{
+          margin-right: 10px;
+          display: inline-block;
+          *display: inline;
+          @include fontMyriad(50px, 700);
+        }
+      }
+      .flag{
+        display: block;
+        margin: 0 auto;
+      }
+      .title{
+        @include fontLato(20px, 900);
+        line-height: 20px;
+        display: block;
+        margin: 10px 0 10px;
+      }
+      .text{
+        padding: 0 10px;
+        color: #555;
+        display: block;
+        font-style: italic;
+        @include fontLato(15px, 400);
+      }
+    }
+    .detail_beer{
+      width: 100%;
+      .title{
+        @include fontLato(20px, 700);
+        margin: 0 0 15px;
+      }
+      .score_beer{
+        > li{
+          padding: 0;
+          position: relative;
+          width: 100%;
+          @include fontLato(16px, 400);
+          .bar{
+            position: absolute;
+            height: 4px;
+            left: 95px;
+            top: 50%;
+            margin-top: -2px;
+            width: 150px;
+            background-color: #000;
+            .color{
+              position: absolute;
+              top: 0;
+              left: 0;
+              height: 4px;
+              background-color: $bb-primary;
+              transition: all .3s ease;
+            }
+          }
+          & + li{
+            margin-top: 2px;
+          }
+        }
+      }
+    }
+    .select_beer{
+      margin-top: 15px;
+      .ui-select{
+        & + .ui-select{
+          margin-top: 20px;
+        }
+        .ui-select__display {
+          height: 30px;
+          border: 1px solid #909090;
+          background-color: #fff;
+        }
+        .ui-select__text-image{
+          color: #000;
+          @include fontLato(16px, 700);
+        }
+        .ui-select__dropdown{
+          color: #000;  
+          box-shadow: 0 5px 5px rgba(0,0,0,.15);
+          .ui-select__options{
+            background-color: #fff;
+            .ui-select-option.is-selected{
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+    .content__beers{
+      width: 870px;
+      float: left;
+      .beer__list{
+        margin: 0 -10px;
+        .beer__item{
+          width: 33.333333%;
+          float: left;
+          padding: 0 10px;
+          margin-bottom: 35px;
+          .beer__inner{
+            width: 270px;
+            margin: 0 auto;
+            position: relative;
+          }
+          .beer--image{
+            width: 100%;
+            height: 190px;
+            border: 1px solid #e6e6e6;
+            background-color: #fff;
+            overflow: hidden;
+            img{
+              display: block;
+              height: 100%;
+              width: auto;
+              margin: 0 auto;
+            }
+            &:hover{
+              cursor: pointer;
+            }
+          }
+          .beer--detail{
+            padding: 25px 10px 0;
+            text-align: center;
+            width: 100%;
+            position: relative;
+            .name{
+              width: 100%;
+              display: block;
+              height: 18px;
+              line-height: 18px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              @include fontLato(16px, 700);
+            }
+            .btn--add{
+              height: 22px;
+              text-align: center;
+              color: #000;
+              width: 106px;
+              margin: 0 auto;
+              display: block;
+              padding: 0 12px;
+              background-color: $color-yellow;
+              line-height: 22px;
+              border: 0;
+              @include borderRadius(20px);
+              @include fontLato(11px, 700);
+              span{
+                display: inline-block;
+                width: 14px;
+                height: 12px;
+                margin-left: 5px;
+                margin-bottom: -2px;
+                background: {
+                  position: center;
+                  repeat: no-repeat;
+                  image: url(/static/img/icon_car-black.png);
+                };
+              }
+              &:hover, &:focus{
+                color: $color-yellow;
+                background-color: #000;
+                span{
+                  background: {
+                    image: url(/static/img/icon_car-yellow.png);
+                  };
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .list_beers-package {
+      .btn--checkout{
+        display: inline-block;
+        background-color: #666;
+        color: #fff;
+        border-radius: 30px;
+        height: 28px;
+        line-height: 28px;
+        border: 0;
+        padding: 0 15px;
+        margin-top: 15px;
+        &:hover, &:focus{
+          outline: 0;
+        }
+      }
+      .item__beer-package{
+        width: 100%;
+        position: relative;
+        & + .item__beer-package{
+          margin-top: 5px;
+        }
+        .btn--remove{
+          width: 26px;
+          height: 26px;
+          position: absolute;
+          top: 50%;
+          margin-top: -13px;
+          right: 5px;
+          display: block;
+          text-align: center;
+          line-height: 26px;
+          font-weight: 700;
+          font-size: 20px;
+          font-family: "Lato";
+          color: black;
+          @include borderRadius(50%);
+          background-color: transparent;
+          border: 0;
+          padding: 0;
+          &:hover, &:focus   {
+            color: $color-yellow;
+            outline: 0;
+            background-color: rgba($color-yellow, .15);
+          } 
+        }
+        .beer {
+          width: 90px;
+          height: 90px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          padding: 0;
+          img{
+            display: block;
+            height: 100%;
+            width: auto;
+            margin: 0 auto;
+          }
+        }
+        .text {
+          height: 90px;
+          line-height: 90px;
+          width: 100%;
+          padding: 0 40px 0 100px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          span{
+            display: block;
+          }
+        }
+      }
+    }
+    @media screen and (min-width: 1200px){
+      .section__inner {
+        width: 1200px;
+      }
+    }
+  }
+  .content__beer-review{
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 70px;
+    padding: 50px 0 40px;
+    background-color: #fff;
+    text-align: center;
+    .title{
+      color: #333;
+      margin: 0 0 20px;
+      @include fontLato(20px, 900);
+    }
+    .text{
+      margin: 0 0 30px;
+      font-style: italic;
+      color: #555;
+      @include fontLato(15px, 400);
+    }
+    .btn--review{
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      color: #000;
+      text-align: center;
+      padding: 0 20px;
+      border: 0;
+      @include borderRadius(30px);
+      @include fontLato(14px, 700);
+      background-color: $color-yellow;
+      &:hover, &:focus{
+        color: $color-yellow;
+        background-color: #000;
+      }
+    }
+  }
+}
